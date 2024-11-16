@@ -15,6 +15,14 @@ static void cadastrarLivro(Scanner leitura)
 { 
     System.out.print("Título: "); 
     String titulo = leitura.nextLine();
+    //AQUI EU VERIFIQUEI SE O LIVRO JÁ FOI CADASTRADO ANTES  
+    for (Livro livro : livros)
+    {
+        if(livro.titulo.equals(titulo)){
+        System.out.println("Livro já cadastrado!");
+        return;
+        }
+    }
     System.out.print("Autor: ");
     String autor = leitura.nextLine(); 
     System.out.print("Gênero: "); 
